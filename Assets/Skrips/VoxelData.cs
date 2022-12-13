@@ -18,6 +18,7 @@ public class VoxelData
     {
         return data[x, z];
     }
+    
     public int getNeighbor(int x, int z, Direction dir)
     {
         DataCoordinate offsetToCheck = offset[(int)dir];
