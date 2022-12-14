@@ -39,7 +39,7 @@ public class VoxelRender : MonoBehaviour
 
         for (int z = 0; z < data.Depth; z++)
         {
-            for (int x = 0; x < data.Depth; x++)
+            for (int x = 0; x < data.Width; x++)
             {
                 if (data.GetCell(x, z) == 0)
                 {
@@ -49,7 +49,7 @@ public class VoxelRender : MonoBehaviour
             }
         }
     }
-    
+
     void MakeCube(float cubeSkale, Vector3 cubePos, int x, int z, VoxelData data)
     {
         for (int i = 0; i < 6; i++)
