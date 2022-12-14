@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
@@ -50,6 +49,7 @@ public class VoxelRender : MonoBehaviour
             }
         }
     }
+    
     void MakeCube(float cubeSkale, Vector3 cubePos, int x, int z, VoxelData data)
     {
         for (int i = 0; i < 6; i++)

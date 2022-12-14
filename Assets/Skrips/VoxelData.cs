@@ -8,21 +8,21 @@ public class VoxelData
 
     public int Width
     {
-        get { return data.GetLength(0); }
+        get { return data.GetLength(0) - 1; }
     }
     public int Depth
     {
-        get { return data.GetLength(1); }
+        get { return data.GetLength(1) - 1; }
     }
     public int GetCell(int x, int z)
     {
         return data[x, z];
     }
-    
+
     public int getNeighbor(int x, int z, Direction dir)
     {
         DataCoordinate offsetToCheck = offset[(int)dir];
-        DataCoordinate neigborcoord = new DataCoordinate(x + offsetToCheck.x, 0 + offsetToCheck.y, 0 + offsetToCheck.z);
+        DataCoordinate neigborcoord = new DataCoordinate(x + offsetToCheck.x, 0 + offsetToCheck.y, z + offsetToCheck.z);
 
         if (neigborcoord.x < 0 || neigborcoord.y >= Width || neigborcoord.y != 0 || neigborcoord.z < 0 || neigborcoord.z >= Depth)
         {
@@ -46,6 +46,7 @@ public class VoxelData
             this.y = y;
             this.z = z;
         }
+
     }
     DataCoordinate[] offset = {
         new DataCoordinate(0, 0, 1),
