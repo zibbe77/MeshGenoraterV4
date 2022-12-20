@@ -10,6 +10,7 @@ public class VoxelRender : MonoBehaviour
 
     public float scale = 1f;
     float adjScale;
+    
 
     private void Awake()
     {
